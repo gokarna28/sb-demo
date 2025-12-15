@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbuck - Construction & Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="images/STARBUCK WH.png" alt="Starbuck Logo" class="preloader-logo-img">
+            </div>
+            <div class="loader"></div>
+            <div class="loading-text">
+                <span class="loading-percentage" id="loadingPercentage">0%</span>
+                <p class="loading-label">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#home">
+                        <img src="images/STARBUCK WH.png" alt="Starbuck Logo" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#projects" class="nav-link">Projects <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu mega-menu-wide">
+                            <ul class="mega-menu-list">
+                                <li><a href="#projects">Rail Infrastructure Projects</a></li>
+                                <li><a href="#projects">Road Infrastructure Projects</a></li>
+                                <li><a href="#projects">Bulk Excavation</a></li>
+                                <li><a href="#projects">Civil</a></li>
+                                <li><a href="#projects">SPECIALTY WORKS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#services" class="nav-link">Excavation</a></li>
+                    <li><a href="#pant-hire" class="nav-link">Plant Hire</a></li>
+                    <li><a href="#services" class="nav-link">Material Solutions</a></li>
+                    <li><a href="#contact" class="nav-link">Careers</a></li>
+                    <li><a href="#contact" class="nav-link">Shop</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background" style="background-image: url('images/Truck - Tipping Material.jpg');">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-title-container">
+                    <div class="hero-vertical-label">100% australian-Owned and Operated</div>
+                    <h1 class="hero-title">
+                        From Earth To Road:<br>
+                        <span class="highlight-orange">Groundwork</span>and <span
+                            class="highlight-orange">Cartage</span> </br>Excellence
+                    </h1>
+                    <!-- <p class="hero-tagline">100% Australian Owned and Operated</p> -->
+                </div>
+                <p class="hero-description">The Starbuck Group is a leading civil construction company specializing in
+                    heavy earthworks across Victoria. Driven by strong values and extensive experience, we deliver
+                    quality projects on time and within budget.</p>
+                <div class="hero-buttons">
+                    <!-- <a href="#projects" class="btn-primary btn-large">Register Your Gear</a> -->
+                    <a href="#" class="hero-register-btn">
+                        Register Your Gear
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="get-quote-btn">
+                        Get a Quote
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="hero-play-button-container">
+                <button class="hero-play-button" id="heroPlayButton">
+                    <i class="fas fa-play"></i>
+                    <span class="play-button-ring"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal">
+            <div class="video-modal-overlay"></div>
+            <div class="video-modal-content">
+                <button class="video-modal-close" id="closeVideoModal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="video-modal-iframe-container">
+                    <iframe id="videoIframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <video id="videoPlayer" controls autoplay style="display: none;">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Partners/Clients Logo Section -->
+    <section class="partners-logos">
+        <div class="partners-logos-wrapper">
+            <div class="partners-logos-track">
+                <div class="partner-logo-item">
+                    <img src="images/Acciona_logo.svg.png" alt="Acciona">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/Artboard-23.png" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/channels4_profile.jpg" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/Cycon-Civil-Logo-645a2692.webp" alt="Cycon Civil">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/images.jpg" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/images.png" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/John_Holland_Logo.png" alt="John Holland">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/Acciona_logo.svg.png" alt="Acciona">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/Artboard-23.png" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/channels4_profile.jpg" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/Cycon-Civil-Logo-645a2692.webp" alt="Cycon Civil">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/images.jpg" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/images.png" alt="Partner">
+                </div>
+                <div class="partner-logo-separator"></div>
+                <div class="partner-logo-item">
+                    <img src="images/John_Holland_Logo.png" alt="John Holland">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-title-container">
+                        <div class="about-vertical-label">About Us</div>
+                        <h2 class="about-title">
+                            About the<br>
+                            <span class="highlight-orange">Starbuck</span> Group
+                        </h2>
+                    </div>
+                    <p class="about-description">The Starbuck Group is a leading civil construction company in Victoria,
+                        specializing in heavy earthworks. Guided by strong values and extensive experience, we deliver
+                        high-quality projects of all sizes on time, within budget, and using modern construction
+                        technologies.</p>
+                    <div class="about-features-grid">
+                        <div class="about-feature-box">
+                            <div class="about-feature-icon">
+                                <img src="icons/construction-worker-svgrepo-com.svg" alt="Construction Worker">
+                            </div>
+                            <h3>Heavy Earthworks Specialists</h3>
+                            <p>Trusted expertise delivering high-quality civil construction across Victoria.</p>
+                        </div>
+                        <div class="about-feature-box">
+                            <div class="about-feature-icon">
+                                <img src="icons/construction-excavator-truck-svgrepo-com.svg" alt="Heavy Earthworks">
+                            </div>
+                            <h3>On Time. On Budget. Built to Last.</h3>
+                            <p>Strong values, modern methods, and proven results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/339520204_181020171448388_5365068087690086877_n-1.jpg"
+                        alt="Professional construction team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-summary">
+        <div class="container">
+            <div class="services-carousel-wrapper">
+                <div class="services-title-container">
+                    <div class="services-header-content">
+                        <div class="services-vertical-label">Services</div>
+                        <h2 class="services-title">Tailored <span class="highlight-orange">Solutions</span></h2>
+                        <p class="services-description">We offer a comprehensive one-stop service solution for projects
+                            of
+                            any size and scope, facilitating connections between clients and contractors while
+                            overseeing
+                            operations.</p>
+                    </div>
+                    <a href="#" class="services-view-details-btn">
+                        View Details
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+                <div class="services-carousel-container">
+                    <!-- All 6 service cards -->
+                    <div class="service-card" data-index="0" data-position="1">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/truck-svgrepo-com.svg" alt="Truck Hire">
+                            </div>
+                            <h3 class="service-card-title">Truck Hire</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">Starbuck Plant Hire offers a diverse range of truck hire
+                                options through our extensive network of registered suppliers.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-index="1" data-position="2">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/cogwheel-gear-svgrepo-com.svg" alt="Equipment Hire">
+                            </div>
+                            <h3 class="service-card-title">Equipment Hire</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">Starbuck Plant Hire has access to an extensive fleet of
+                                earthmoving equipment, operated by heavily experienced and fully qualified and licensed
+                                professionals.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-index="2" data-position="3">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/construction-excavator-truck-svgrepo-com.svg" alt="Specialty Equipment">
+                            </div>
+                            <h3 class="service-card-title">Specialty Equipment</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">We take pride in our well-established network of
+                                contractors and suppliers, which enables us to provide equipment and operators for
+                                projects of any type or scale.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-index="3" data-position="0">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/construction-dump-dumper-svgrepo-com.svg" alt="Material Disposal">
+                            </div>
+                            <h3 class="service-card-title">Material Disposal</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">Starbuck partners with several trusted material disposal
+                                sites across Victoria, providing our clients with competitive and cost-effective
+                                disposal solutions.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-index="4" data-position="0">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/bobcat-bulldozer-construction-svgrepo-com.svg"
+                                    alt="Contaminated Soil Removal">
+                            </div>
+                            <h3 class="service-card-title">Contaminated Soil Removal</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">Starbuck Plant Hire boasts a team of EPA licensed
+                                operators to undertake contaminated soil disposal. All operators have the necessary
+                                qualifications and training.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-index="5" data-position="0">
+                        <div class="service-card-header">
+                            <div class="service-card-icon">
+                                <img src="icons/maintenance-mechanic-repair-svgrepo-com.svg" alt="Supply and Reuse">
+                            </div>
+                            <h3 class="service-card-title">Supply and Reuse</h3>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-card-description">At Starbuck, we aim to actively reuse and recycle
+                                material across our projects. We can provide our clients with beneficial re-use
+                                opportunities ensuring a cost-effective material solution.</p>
+                            <a href="#" class="service-card-link">Learn More <span
+                                    class="service-card-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Slider Navigation - Below Cards -->
+                <div class="services-mobile-nav">
+                    <button class="services-slider-btn services-mobile-prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <div class="services-slider-dots">
+                        <span class="services-dot active" data-slide="0"></span>
+                        <span class="services-dot" data-slide="1"></span>
+                    </div>
+                    <button class="services-slider-btn services-mobile-next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Slider Navigation -->
+                <button class="services-slider-btn services-slider-prev" aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="services-slider-btn services-slider-next" aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <div class="services-slider-controls">
+                    <div class="services-slider-dots">
+                        <span class="services-dot active" data-slide="0"></span>
+                        <span class="services-dot" data-slide="1"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Director's Quotes / Benefits Section -->
+    <section class="directors-quotes">
+        <div class="container">
+            <div class="directors-testimonial-card">
+                <div class="directors-quote-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 21V8C3 5.79 4.79 4 7 4H11V8H7V21H3Z" fill="#FFFFFF" />
+                        <path d="M13 21V8C13 5.79 14.79 4 17 4H21V8H17V21H13Z" fill="#FFFFFF" />
+                    </svg>
+                </div>
+                <div class="directors-testimonial-content">
+                    <h2 class="directors-testimonial-headline">Our Director’s Vision</h2>
+                    <p class="directors-testimonial-quote">"After years of unwavering commitment and relentless
+                        dedication, I can proudly assure you that the services rendered by the Starbuck Group are
+                        unparalleled. With a track record spanning over 15 years, we are confident our clients will
+                        always find satisfaction."</p>
+
+                    <div class="directors-testimonial-author">
+
+                        <div class="directors-avatar">
+                            <img src="images/derictor.jpg" alt="James Starbuck">
+                        </div>
+                        <div class="directors-author-info">
+                            <div class="directors-author-name-wrapper">
+                                <span class="directors-author-separator"></span>
+                                <p class="directors-author-name">JAMES STARBUCK</p>
+                            </div>
+                            <p class="directors-author-title">Director, Starbuck Group</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Our Values Section -->
+    <section id="values" class="our-values">
+        <div class="container">
+            <!-- <div class="title-wrapper"> -->
+            <div class="values-header">
+                <div class="values-title-container">
+                    <div class="values-vertical-label">Our values</div>
+                    <h2 class="values-title">
+                        Our <span class="highlight-orange">Vision</span> & <span class="highlight-orange">Core
+                            Values</span>
+                    </h2>
+                </div>
+                <p class="vision-text">"Our vision is to be the contractor of choice for earthworks and material
+                    haulage
+                    solutions by
+                    surpassing customer expectations and providing unrivalled value."</p>
+            </div>
+
+            <!-- </div> -->
+            <div class="values-content">
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-card-header">
+                            <div class="value-icon">
+                                <img src="icons/spark-svgrepo-com.svg" alt="Innovation">
+                            </div>
+                            <h3>Innovation</h3>
+                        </div>
+                        <p>We listen, innovate, and embrace new technology to deliver smarter, more effective solutions
+                            for every project.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card-header">
+                            <div class="value-icon">
+                                <img src="icons/cogwheel-gear-svgrepo-com.svg" alt="Efficiency">
+                            </div>
+                            <h3>Efficiency</h3>
+                        </div>
+                        <p>We work smarter. With tight timeline control and careful budgeting, we deliver with precision
+                            and exceed expectations.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-card-header">
+                            <div class="value-icon">
+                                <img src="icons/safety-svgrepo-com.svg" alt="Safety">
+                            </div>
+                            <h3>Safety</h3>
+                        </div>
+                        <p>NoSafety comes first—we lead by example and exceed industry standards in every project.</p>
+                    </div>
+                    <div class="value-card value-card-orange">
+                        <div class="value-card-header">
+                            <div class="value-icon">
+                                <img src="icons/file-check-svgrepo-com.svg" alt="Integrity">
+                            </div>
+                            <h3>Integrity</h3>
+                        </div>
+                        <p>We do what we say. We build trust through transparency, honesty, and strong relationships.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Partnerships Section -->
+    <section id="partnerships" class="partnerships">
+        <div class="container">
+            <div class="partnerships-header">
+                <div class="partnerships-header-left">
+                    <div class="partnerships-title-container">
+                        <div class="partnerships-vertical-label">Partnerships</div>
+                        <h2 class="partnerships-title">Strengthening Our </br><span
+                                class="highlight-orange">Capabilities</span>
+                            Through Strategic </br><span class="highlight-orange">Partnerships</span></h2>
+                    </div>
+                </div>
+                <div class="partnerships-header-right">
+                    <a href="#" class="partnerships-learn-more-btn">
+                        Learn More
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="partnerships-content">
+
+                <div class="partnerships-image">
+                    <img src="images/Proud Member Logo FY2024.png" alt="Professional partnership">
+                </div>
+                <div class="partnerships-text">
+                    <!-- <div class="partnerships-title-container">
+                    <div class="partnerships-vertical-label">Partnerships</div>
+                    <h2 class="partnerships-title">Strengthening Our <span
+                            class="highlight-orange">Capabilities</span> Through Strategic <span
+                            class="highlight-orange">Partnerships</span></h2>
+                </div> -->
+
+                    <div class="partnerships-cards">
+                        <h3>NAWIC</h3>
+                        <p>
+                            Starbuck has partnered with the National Association of Women in Construction (NAWIC) to
+                            support and advance women in the construction industry. Together, we’re creating more
+                            opportunities for women to enter, grow, and succeed in the trades.
+                        </p>
+                        <p>Keep an eye out for a touch of pink at Starbuck — our pink excavators are driving
+                            conversations that champion women in construction.</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="partnerships-content-reversed">
+                <div class="partnerships-text-reversed">
+                    <h3>Kinaway</h3>
+                    <p>We’re proud to partner with Kinaway, supporting the growth of Aboriginal and Torres Strait
+                        Islander businesses across Victoria. This partnership strengthens our commitment to meaningful
+                        engagement with Indigenous communities.</p>
+
+                    <p>Our initiatives include:</p>
+                    <ul>
+                        <li><strong>RAP:</strong> Building cultural understanding and reconciliation.</li>
+                        <li><strong>Indigenous Procurement:</strong> Partnering with Indigenous-owned businesses.</li>
+                        <li><strong>Employment & Training:</strong> Creating opportunities for Indigenous individuals.
+                        </li>
+                    </ul>
+                </div>
+                <div class="partnerships-image-reversed">
+                    <img src="images/2024 Light Corporate Partner logo.png" alt="Corporate Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-header">
+                <div class="projects-header-left">
+                    <div class="projects-title-container">
+                        <div class="projects-vertical-label">Projects</div>
+                        <h2 class="projects-title">
+                            Demonstrating <span class="highlight-orange">Excellence</span> Through </br>Our Featured
+                            <span class="highlight-orange">Featured</span> Projects
+                        </h2>
+                    </div>
+                </div>
+                <div class="projects-header-right">
+                    <a href="#" class="projects-view-all-btn">
+                        View All Project
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/BULK-EXCAVATION(1).jpg');">
+                    </div>
+                    <div class="project-info-area">
+                        <p class="project-location">California, USA</p>
+                        <h3 class="project-name">Westgate Tunnel Project</h3>
+                        <!-- <p>descriptions</p> -->
+                    </div>
+                    <div class="project-hover-details">
+                        <p class="hover-location">California, USA</p>
+                        <h3 class="hover-project-name">Westgate Tunnel Project</h3>
+                        <p class="hover-description">Successfully carted more than 500,000 tonne of both rock and soil
+                            from various areas of the project.</p>
+                        <a href="#" class="hover-view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/Float Trailer.JPG');">
+                    </div>
+                    <div class="project-info-area">
+                        <p class="project-location">New York, USA</p>
+                        <h3 class="project-name">Level Crossing Removal Projects</h3>
+                    </div>
+                    <div class="project-hover-details">
+                        <p class="hover-location">New York, USA</p>
+                        <h3 class="hover-project-name">Level Crossing Removal Projects</h3>
+                        <p class="hover-description">Active participation in the Victorian Government's initiative to
+                            eliminate hazardous level crossings.</p>
+                        <a href="#" class="hover-view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('images/337553898_1269890393607680_5856316774763016616_n-copy.jpg');">
+                    </div>
+                    <div class="project-info-area">
+                        <p class="project-location">New Jersey, USA</p>
+                        <h3 class="project-name">Bulk Excavation Projects</h3>
+                    </div>
+                    <div class="project-hover-details">
+                        <p class="hover-location">New Jersey, USA</p>
+                        <h3 class="hover-project-name">Bulk Excavation Projects</h3>
+                        <p class="hover-description">Specialist in bulk earthworks, from precise site-cuts to bulk
+                            basement excavation.</p>
+                        <a href="#" class="hover-view-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Podcast and Interviews Section -->
+    <!-- <section id="podcasts" class="podcasts-interviews">
+        <div class="container">
+            <div class="podcasts-header">
+                <div class="podcasts-header-top">
+                    <div class="podcasts-title-container">
+                        <div class="podcasts-vertical-label">Podcasts & Interviews</div>
+                        <h2 class="podcasts-title">
+                            Telling Our <span class="highlight-orange"> Story </span>Through </br>Conversations, <span
+                                class="highlight-orange"> Podcasts & Interviews</span>
+                        </h2>
+                    </div>
+                    <a href="#" class="podcasts-view-all-btn">
+                        View All
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+                <p class="podcasts-description">Watch our latest podcasts and interviews featuring industry insights,
+                    project highlights, and expert discussions.</p>
+            </div>
+            <div class="podcasts-grid">
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/S0A4982.jpg" alt="Industry Insights">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Industry Insights</h3>
+                        <p class="video-subtitle">Construction Excellence</p>
+                    </div>
+                </div>
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/339520204_181020171448388_5365068087690086877_n-1.jpg" alt="Project Spotlight">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Project Spotlight</h3>
+                        <p class="video-subtitle">Major Infrastructure</p>
+                    </div>
+                </div>
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/CAT 325 - Bulk Basement Dig.jpg" alt="Expert Interview">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Expert Interview</h3>
+                        <p class="video-subtitle">Innovation in Earthmoving</p>
+                    </div>
+                </div>
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/299344323_766222028027994_5348699793121738230_n3.jpg"
+                            alt="Building the Future">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Building the Future</h3>
+                        <p class="video-subtitle">Starbuck Group</p>
+                    </div>
+                </div>
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/Cam.jpg" alt="Earthmoving Excellence">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Earthmoving Excellence</h3>
+                        <p class="video-subtitle">Victoria Projects</p>
+                    </div>
+                </div>
+                <div class="podcast-video-card">
+                    <div class="video-wrapper">
+                        <img src="images/BULK-EXCAVATION(1).jpg" alt="Heavy Machinery">
+                        <button class="podcast-play-button" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Heavy Machinery</h3>
+                        <p class="video-subtitle">Equipment Showcase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Our People Section -->
+    <section id="our-people" class="our-people-section">
+        <div class="our-people-background" style="background-image: url('images/Bulk-Excavation.jpg');">
+            <div class="our-people-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="our-people-header">
+                <div class="our-people-title-container">
+                    <div class="our-people-vertical-label">Our People</div>
+                    <h2 class="our-people-title">The Faces of Our <span class="highlight-orange">Company</span></h2>
+                </div>
+                <p class="our-people-description">We invest in the up skilling and personal development of our people.
+                    In addition to internal training aimed at high performance outcomes, our team has an extensive range
+                    of specialised skills and experience across multi-disciplinary fields.</p>
+            </div>
+            <div class="our-people-image">
+                <img src="images/Artboard-38@2x.png" alt="Our People">
+            </div>
+            <!-- Floating Careers Card -->
+            <div class="careers-floating-card">
+                <div class="careers-card-content">
+                    <!-- <div class="careers-vertical-label">Careers</div> -->
+                    <h3 class="careers-card-title">Careers at the <span class="highlight-orange">Starbuck Group</span>
+                    </h3>
+                    <p class="careers-card-description">Ready to grow your career with a purpose-driven team?
+                        </br>Explore our current openings and join us at Starbuck Group.</p>
+                    <a href="#contact" class="careers-btn">Join Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Waves Container -->
+        <div class="our-people-waves">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,107,53,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,107,53,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,107,53,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ff6b35" />
+                </g>
+            </svg>
+        </div>
+        <!-- Waves end -->
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-form-section-modern" id="contact">
+        <div class="container">
+            <div class="contact-form-card">
+                <!-- Left Section: Contact Form -->
+                <div class="contact-form-left">
+                    <div class="contact-form-content">
+                        <div class="contact-title-container">
+                            <div class="contact-vertical-label">Contact</div>
+                            <h2 class="contact-title">Get in <span class="highlight-orange">touch</span> now!</h2>
+                        </div>
+                        <form id="landingContactForm" class="landing-contact-form-new">
+                            <!-- I am based in and Message in Flex Container -->
+                            <div class="form-row-flex">
+                                <!-- I am based in -->
+                                <div class="form-group-new">
+                                    <label for="location">I am based in: <span
+                                            class="required-asterisk">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="location" value="victoria" required>
+                                            <span>Victoria</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="location" value="queensland" required>
+                                            <span>Queensland</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="location" value="nsw" required>
+                                            <span>New South Wales</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="location" value="other" required>
+                                            <span>Other</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Enquiry Type -->
+                                <div class="form-group-new">
+                                    <label for="enquiry-type">Enquiry type <span
+                                            class="required-asterisk">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="enquiry-type" value="register-truck" required>
+                                            <span>Register a truck or machine</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="enquiry-type" value="machine-hire" required>
+                                            <span>Machine hire or materials service enquiry</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="enquiry-type" value="general" required>
+                                            <span>General enquiry</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Name Fields -->
+                            <div class="form-group-new">
+                                <label for="name">Name <span class="required-asterisk">*</span></label>
+                                <div class="form-row-new">
+                                    <div class="form-field-inline-new">
+                                        <input type="text" id="first-name" name="first-name" required>
+                                        <span class="inline-label">First</span>
+                                    </div>
+                                    <div class="form-field-inline-new">
+                                        <input type="text" id="last-name" name="last-name" required>
+                                        <span class="inline-label">Last</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email and Contact Number -->
+                            <div class="form-row-new">
+                                <div class="form-group-new">
+                                    <label for="email">Email <span class="required-asterisk">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group-new">
+                                    <label for="contact-number">Contact number <span
+                                            class="required-asterisk">*</span></label>
+                                    <input type="tel" id="contact-number" name="contact-number" required>
+                                </div>
+                            </div>
+
+
+                            <!-- Comments / Message -->
+                            <div class="form-group-new">
+                                <label for="message">Comments / Message</label>
+                                <textarea id="message" name="message" rows="5"></textarea>
+                            </div>
+                            <!-- Terms & Privacy Links -->
+                            <div class="form-links">
+                                <a href="#" class="form-link">Terms & Conditions</a>
+                                <span class="form-link-separator">|</span>
+                                <a href="#" class="form-link">Privacy Policy</a>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-submit-new">Send</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Section: Contact Info -->
+                <div class="contact-info-right">
+                    <div class="right-yellow-part"></div>
+                    <div class="contact-info-content-wrapper">
+                        <div class="contact-info-header">
+                            <h3 class="contact-info-title">Info</h3>
+                        </div>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item-new">
+                                <div class="contact-info-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <span class="contact-info-text">admin@starbuckgroup.com.au</span>
+                            </div>
+                            <div class="contact-info-item-new">
+                                <div class="contact-info-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </div>
+                                <span class="contact-info-text">03 8535 3070</span>
+                            </div>
+                            <div class="contact-info-item-new">
+                                <div class="contact-info-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <span class="contact-info-text">15/882-900 Cooper Street, Somerton VIC 3064</span>
+                            </div>
+                            <div class="contact-info-item-new">
+                                <div class="contact-info-icon-new">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <span class="contact-info-text">09:00 - 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-logo-column">
+                    <div class="footer-logo">
+                        <a href="#home">
+                            <img src="images/STARBUCK WH.png" alt="Starbuck Logo" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p class="footer-slogan">Delivering excellence in heavy earthworks, on time and within budget</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-section-title">Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Credit Application</a></li>
+                        <li><a href="#">Report an Incident</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-section-title">Contact Information</h4>
+                    <ul class="footer-contact-list">
+                        <li>15/882-900 Cooper Street Somerton VIC 3064</li>
+                        <li>Phone: 03 8535 3070</li>
+                        <li>Email: <a href="mailto:admin@starbuckgroup.com.au">admin@starbuckgroup.com.au</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-section-title">Follow Us</h4>
+                    <div class="footer-social-buttons">
+                        <a href="#" class="social-button">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-button">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-button">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>© 2024 Starbuck Group. All rights reserved.</p>
+            </div>
+        </div>
+        <button class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

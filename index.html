@@ -40,7 +40,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="#home">
-                        <img src="images/STARBUCK WH.png" alt="Starbuck Logo" class="logo-img">
+                        <img src="images/STARBUCK BK.png" alt="Starbuck Logo" class="logo-img">
                     </a>
                 </div>
                 <ul class="nav-menu" id="navMenu">
@@ -76,41 +76,44 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background" style="background-image: url('images/Truck - Tipping Material.jpg');">
-            <div class="hero-overlay"></div>
-        </div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-title-container">
-                    <div class="hero-vertical-label">100% australian-Owned and Operated</div>
-                    <h1 class="hero-title">
-                        From Earth To Road:<br>
-                        <span class="highlight-orange">Groundwork</span>and <span
-                            class="highlight-orange">Cartage</span> </br>Excellence
-                    </h1>
-                    <!-- <p class="hero-tagline">100% Australian Owned and Operated</p> -->
+            <div class="hero-wrapper">
+                <!-- Left Side - Text Content -->
+                <div class="hero-content">
+                    <div class="hero-title-container">
+                        <div class="hero-vertical-label">100% australian-Owned and Operated</div>
+                        <h1 class="hero-title">
+                            From Earth To Road:<br>
+                            <span class="highlight-orange">Groundwork</span>and <span
+                                class="highlight-orange">Cartage</span> </br>Excellence
+                        </h1>
+                    </div>
+                    <p class="hero-description">The Starbuck Group is a leading civil construction company specializing
+                        in
+                        heavy earthworks across Victoria. Driven by strong values and extensive experience, we deliver
+                        quality projects on time and within budget.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="hero-register-btn">
+                            Register Your Gear
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#" class="get-quote-btn">
+                            Get a Quote
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
                 </div>
-                <p class="hero-description">The Starbuck Group is a leading civil construction company specializing in
-                    heavy earthworks across Victoria. Driven by strong values and extensive experience, we deliver
-                    quality projects on time and within budget.</p>
-                <div class="hero-buttons">
-                    <!-- <a href="#projects" class="btn-primary btn-large">Register Your Gear</a> -->
-                    <a href="#" class="hero-register-btn">
-                        Register Your Gear
-                        <span class="btn-arrow">→</span>
-                    </a>
-                    <a href="#" class="get-quote-btn">
-                        Get a Quote
-                        <span class="btn-arrow">→</span>
-                    </a>
+                <!-- Right Side - Video -->
+                <div class="hero-right">
+                    <div class="hero-video-container">
+                        <video class="hero-video" autoplay muted loop playsinline>
+                            <source src="videos/hero-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-frame"></div>
                 </div>
 
-            </div>
-            <div class="hero-play-button-container">
-                <button class="hero-play-button" id="heroPlayButton">
-                    <i class="fas fa-play"></i>
-                    <span class="play-button-ring"></span>
-                </button>
             </div>
         </div>
 
@@ -250,43 +253,39 @@
         </div>
     </section>
 
-        <!-- Director's Quotes / Benefits Section -->
-        <section class="directors-quotes">
-            <div class="container">
-                <div class="directors-testimonial-card">
-                    <div class="directors-quote-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 21V8C3 5.79 4.79 4 7 4H11V8H7V21H3Z" fill="#FFFFFF" />
-                            <path d="M13 21V8C13 5.79 14.79 4 17 4H21V8H17V21H13Z" fill="#FFFFFF" />
-                        </svg>
+    <!-- Director's Quotes / Benefits Section -->
+    <section class="directors-quotes">
+        <div class="container">
+            <div class="directors-testimonial-card">
+
+                <div class="directors-testimonial-content">
+
+                    <div class="directors-testimonial-author">
+                        <div class="directors-avatar">
+                            <img src="images/director-image.png" alt="James Starbuck">
+                        </div>
                     </div>
-                    <div class="directors-testimonial-content">
+                    <div class="directors-testimonial-content-inner">
                         <h2 class="directors-testimonial-headline">Our Director’s Vision</h2>
                         <p class="directors-testimonial-quote">"After years of unwavering commitment and relentless
                             dedication, I can proudly assure you that the services rendered by the Starbuck Group are
                             unparalleled. With a track record spanning over 15 years, we are confident our clients will
                             always find satisfaction."</p>
-    
-                        <div class="directors-testimonial-author">
-    
-                            <div class="directors-avatar">
-                                <img src="images/derictor.jpg" alt="James Starbuck">
+
+                        <div class="directors-author-info">
+                            <div class="directors-author-name-wrapper">
+                                <span class="directors-author-separator"></span>
+                                <p class="directors-author-name">JAMES STARBUCK</p>
                             </div>
-                            <div class="directors-author-info">
-                                <div class="directors-author-name-wrapper">
-                                    <span class="directors-author-separator"></span>
-                                    <p class="directors-author-name">JAMES STARBUCK</p>
-                                </div>
-                                <p class="directors-author-title">Director, Starbuck Group</p>
-                            </div>
+                            <p class="directors-author-title">Director, Starbuck Group</p>
                         </div>
-    
                     </div>
                 </div>
             </div>
-        </section>
-    
-    
+        </div>
+    </section>
+
+
     <!-- Services Section -->
     <section class="services-summary">
         <div class="container">
@@ -408,7 +407,8 @@
                 <!-- Mobile Slider Navigation - Below Cards -->
                 <div class="services-mobile-nav">
                     <button class="services-slider-btn services-mobile-prev" aria-label="Previous slide">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M19 12H5M12 19l-7-7 7-7" />
                         </svg>
                     </button>
@@ -417,7 +417,8 @@
                         <span class="services-dot" data-slide="1"></span>
                     </div>
                     <button class="services-slider-btn services-mobile-next" aria-label="Next slide">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </button>
@@ -974,6 +975,12 @@
                         </a>
                     </div>
                     <p class="footer-slogan">Delivering excellence in heavy earthworks, on time and within budget</p>
+                    <div class="footer-logo">
+                        <a href="#home">
+                            <img src="images/aultrillian.png" alt="austrillian Logo"
+                                class="footer-logo-img footer-logo-img-no-filter">
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4 class="footer-section-title">Useful Links</h4>

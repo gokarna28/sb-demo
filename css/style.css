@@ -1263,21 +1263,89 @@ section {
    About Section
    =================================== */
 .about {
-    background: var(--white);
-    padding: 6rem 0;
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Beige background covering the entire section */
+.about-beige-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F1E8;
+    z-index: 1;
+}
+
+/* Right side image container */
+.about-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Main dozer/construction scene image */
+.about-dozer-image {
+    position: absolute;
+    top: 200px;
+    /* right: 200px; */
+    width: 90%;
+    height: auto;
+    z-index: 100;
+}
+
+.about-dozer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+/* Middle mask creating the diagonal split */
+.about-middle-mask {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 60%;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-middle-mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.about-text {
+    width: 40%;
+    max-width: 600px;
 }
 
 .about-text {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .about-title-container {
@@ -2118,7 +2186,8 @@ section {
 }
 
 
-.service-card[data-position="2"]:hover {
+/* Hover effects removed */
+/* .service-card[data-position="2"]:hover {
     transform: translate(-50%, -50%) translateX(0) rotateY(0deg) scale(1.02);
     box-shadow: 0 25px 70px rgba(255, 107, 53, 0.3);
     border-color: var(--primary-color);
@@ -2157,7 +2226,7 @@ section {
 .service-card:hover .service-card-arrow {
     background: var(--primary-color);
     transform: translateX(5px);
-}
+} */
 
 .service-card-header {
     display: flex;
@@ -5535,26 +5604,32 @@ section {
 }
 
 .footer-social-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 
 .social-button {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    justify-content: center;
+    gap: 0;
+    padding: 0.75rem;
     background: #3a3a3a;
     border-radius: 8px;
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
     font-size: 0.95rem;
+    width: 45px;
+    height: 45px;
+}
+
+.social-button span {
+    display: none;
 }
 
 .social-button:hover {
-    background: #4a4a4a;
     transform: translateY(-2px);
 }
 
@@ -5562,6 +5637,19 @@ section {
     font-size: 1.2rem;
     width: 20px;
     text-align: center;
+}
+
+/* Social button brand colors on hover - background */
+.social-button:first-child:hover {
+    background: #0077b5;
+}
+
+.social-button:nth-child(2):hover {
+    background: #1877f2;
+}
+
+.social-button:nth-child(3):hover {
+    background: #ff0000;
 }
 
 .footer-divider {
@@ -5658,13 +5746,25 @@ section {
     }
 
     /* About Section */
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .about {
+        min-height: auto;
     }
 
-    .about-image {
-        min-height: 400px;
+    .about-image-container {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .about-content {
+        padding: 3rem 0;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     /* Other sections */
@@ -6251,12 +6351,18 @@ section {
     .excavation-content,
     .what-we-do-content,
 
-    .about-image,
+    .about-image-container {
+        height: 35vh;
+    }
+
     .excavation-image {
         min-height: 300px;
     }
 
-    .about-image,
+    .about-image-container {
+        height: 35vh;
+    }
+
     .excavation-image,
     .what-we-do-img {
         min-height: 300px;
@@ -6911,8 +7017,9 @@ section {
     }
 
     /* About & Excavation */
-    .about-image,
-    .excavation-image,
+    .about-image-container {
+        height: 35vh;
+    }
 
     .about-feature-box h3,
     .excavation-feature-box h3 {

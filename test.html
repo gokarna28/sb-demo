@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -192,13 +193,16 @@
         .values-left {
             width: 50%;
             display: flex;
-            background-color: red;
+            /* background-color: red; */
             position: relative;
         }
         .values-right {
             width: 50%;
             display: flex;
-            background-color: blue;
+            /* background-color: blue; */
+            position: relative;
+            align-items: start;
+            justify-content: center;
         }
         .curve-image {
             width: 100%;
@@ -234,28 +238,29 @@
             justify-content: center;
             gap: 1rem;
             position: absolute;
-            left: 400px;
+            left: 370px;
+            top: 100px;
         }
         .values-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             line-height: 1.15;
             margin: 0;
             padding: 0;
             letter-spacing: -1px;
-            color: var(--secondary-color);
+            color: #1a1a1a;
             flex: 0 1 auto;
         }
         .values-title .highlight-orange {
-            color: var(--primary-color);
+            color: #ff6b35;
         }
         .values-text {
             font-size: 1rem;
             line-height: 1.6;
-            color: var(--text-light);
+            color: #666666;
             margin: 0;
             max-width: 700px;
-            text-align: center;
+            text-align: start;
         }
         .values-content {
             display: flex;
@@ -277,42 +282,212 @@
         }
         .value-cards-container {
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column; */
             justify-content: space-between;
             align-items: start;
             position: absolute;
-            left: 0;
+            left: 20px;
+            right: 0;
+            flex-wrap: wrap;
+            gap: 50px;
         }
         .value-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 0.75rem;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
+            max-width: 250px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+        }
+        .value-card:hover {
+            background: #FDB813;
+            border-color: #FDB813;
+        }
+        .card-4 {
+            border-color: #FDB813;
+        }
+        .value-card:hover .value-card-header {
+            color: white;
+        }
+        .value-card:hover .value-card-content,
+        .value-card:hover .value-card-content p {
+            color: white;
+        }
+        .value-card:hover .value-card-icon::before {
+            color: white;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+        }
+        .value-card:hover .value-card-button {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            color: white;
+        }
+        .value-card:hover .value-card-read-more {
+            color: white;
+        }
+        .card-1 {
+            transform: rotate(3deg);
+            position: relative;
+            top: 100px;
+            left: 50px;
+        }
+        .card-2 {
+            transform: rotate(-5deg);
+            position: relative;
+            top: 70px;
+            right: 50px;
+        }
+        .card-3 {
+            transform: rotate(-5deg);
+            position: relative;
+            left: 20px;
+            top: 50px;
+        }
+        .card-4 {
+            transform: rotate(9deg);
+            top: 100px;
+            right: 50px;
+        }
+        .card-4 {
+            background: #FDB813;
+        }
+        .card-4 .value-card-header {
+            color: white;
+        }
+        .card-4 .value-card-content,
+        .card-4 .value-card-content p {
+            color: white;
+        }
+        .card-4 .value-card-icon::before {
+            color: white;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+        }
+        .card-4 .value-card-button {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            color: white;
+        }
+        .card-4 .value-card-read-more {
+            color: white;
+        }
+        .value-card-icon {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            width: 28px;
+            height: 28px;
+            color: #FDB813;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .value-card-icon::before {
+            content: '⚡';
+            font-size: 1.5rem;
+            color: #FDB813;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s ease;
+        }
+        .card-2 .value-card-icon::before {
+            content: '';
+        }
+        .card-2 .value-card-icon i {
+            font-size: 1.5rem;
+            color: #FDB813;
+            transition: all 0.3s ease;
+        }
+        .card-2:hover .value-card-icon i {
+            color: white;
+        }
+        .card-3 .value-card-icon::before {
+            content: '';
+        }
+        .card-3 .value-card-icon i {
+            font-size: 1.5rem;
+            color: #FDB813;
+            transition: all 0.3s ease;
+        }
+        .card-3:hover .value-card-icon i {
+            color: white;
+        }
+        .card-4 .value-card-icon::before {
+            content: '';
+        }
+        .card-4 .value-card-icon i {
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .value-card-button {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #FFF3D9;
+            border: 1px solid #FDB813;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FDB813;
+            font-size: 0.65rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .value-card-button::after {
+            content: '→';
         }
         .value-card-header {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.2;
             margin: 0;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
             padding: 0;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
+            color: #333333;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
         .value-card-content {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-light);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: #666666;
             margin: 0;
             padding: 0;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
         }
         .value-card-content p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-light);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: #666666;
             margin: 0;
             padding: 0;
+            transition: color 0.3s ease;
         }
-        .value-card-content p {
-            font-size: 1rem;    
+        .value-card-read-more {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333333;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s ease;
+        }
+        .value-card-read-more::after {
+            content: '→';
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -363,8 +538,6 @@
                 <div class="crane-image">
                     <img src="images/value-crane.png" alt="">
                 </div>
-            </div>
-            <div class="values-right">
                 <div class="values-title-container">
                     <div class="values-title">Our <span class="highlight-orange">Vision</span> & <span class="highlight-orange">Core
                         Values</span></div>
@@ -375,34 +548,49 @@
                             surpassing customer expectations and providing unrivalled value."</p>
                     </div>
                 </div>
+            </div>
+            <div class="values-right">
+                
                 <div class="values-content">
                     <div class="hook-image">
                         <img src="images/hook.png" alt="">    
                     </div>
                     <div class="value-cards-container">
-                        <div class="value-card">
+                        <div class="value-card card-1">
+                            <div class="value-card-icon"></div>
+                            <div class="value-card-button"></div>
                             <div class="value-card-header">Innovation</div>
                             <div class="value-card-content">
-                                <p>We listen, innovate, and embrace new technology to deliver smarter, more effective solutions for every project.</p>
+                                <p>We listen, learn and seek out the best ideas to continually improve</p>
                             </div>
+                            <a href="#" class="value-card-read-more">Read More</a>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card-2">
+                            <div class="value-card-icon"><i class="fa-regular fa-clock"></i></div>
+                            <div class="value-card-button"></div>
                             <div class="value-card-header">Efficiency</div>
                             <div class="value-card-content">
                                 <p>We work smarter. With tight timeline control and careful budgeting, we deliver with precision and exceed expectations.</p>
                             </div>
+                            <a href="#" class="value-card-read-more">Read More</a>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card-3">
+                            <div class="value-card-icon"><i class="fa-solid fa-shield"></i></div>
+                            <div class="value-card-button"></div>
                             <div class="value-card-header">Safety</div>
                             <div class="value-card-content">
-                                <p>NoSafety comes first—we lead by example and exceed industry standards in every project.</p>
+                                <p>Safety comes first—we lead by example and exceed industry standards in every project.</p>
                             </div>
+                            <a href="#" class="value-card-read-more">Read More</a>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card-4">
+                            <div class="value-card-icon"><i class="fa-solid fa-check-double"></i></div>
+                            <div class="value-card-button"></div>
                             <div class="value-card-header">Integrity</div>
                             <div class="value-card-content">
                                 <p>We build trust through transparency and deliver exceptional value to our clients.</p>
                             </div>
+                            <a href="#" class="value-card-read-more">Read More</a>
                         </div>
                     </div>
                 </div>

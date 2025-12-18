@@ -647,7 +647,7 @@ img {
     display: flex;
     align-items: center;
     color: var(--secondary-color);
-    padding: 6rem 0;
+    padding: 0;
     background: #F5F1E8;
     /* background: radial-gradient(circle, #162329, #394852); */
 
@@ -659,6 +659,13 @@ img {
     gap: 4rem;
     align-items: center;
     width: 100%;
+    height: 100vh;
+}
+
+.hero .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
@@ -673,18 +680,19 @@ img {
 
 .hero-right {
     position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-video-container {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 12px;
     overflow: hidden;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
-    background: radial-gradient(circle, #162329, #394852);
     z-index: 2;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 
 }
 
@@ -693,6 +701,7 @@ img {
     height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: 12px;
 }
 
 .video-frame {
@@ -701,12 +710,13 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
-    background: radial-gradient(circle, #2a7ca2, #0c3a59);
-    transform: rotate(-9deg);
+    /* background: radial-gradient(circle, #2a7ca2, #0c3a59); */
+    background-color: var(--primary-color);
     z-index: 1;
     pointer-events: none;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .hero-background-fallback {
@@ -746,7 +756,7 @@ img {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 0 0 4rem;
 }
 
 .hero-tagline {
@@ -2746,7 +2756,27 @@ section {
    =================================== */
 .our-values {
     background: var(--bg-light);
-    padding: 6rem 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.beige-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F1E8;
+    z-index: 1;
+}
+
+.our-values .container {
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
 }
 
 .values-header {
@@ -2954,6 +2984,428 @@ section {
 
 .value-card:hover .value-icon img {
     filter: brightness(0) invert(1);
+}
+
+/* New Values Section Styles */
+.values-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.values-left {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.values-right {
+    width: 50%;
+    display: flex;
+    position: relative;
+    align-items: start;
+    justify-content: center;
+}
+
+.curve-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.curve-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.crane-image {
+    width: 62.5%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.crane-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.values-title-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    left: 370px;
+    top: 100px;
+}
+
+.values-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+    flex: 0 1 auto;
+}
+
+.values-title .highlight-orange {
+    color: #ff6b35;
+}
+
+.values-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+    max-width: 700px;
+    text-align: start;
+}
+
+.values-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.hook-image {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    left: 150px;
+}
+
+.hook-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.value-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: absolute;
+    left: 20px;
+    right: 0;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* New Value Card Styles */
+.our-values .value-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0.75rem;
+    width: 100%;
+    max-width: 250px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    display: block;
+    flex-direction: column;
+    gap: 0;
+}
+
+.our-values .value-card:hover {
+    background: #FDB813;
+    border-color: #FDB813;
+}
+
+.our-values .card-4 {
+    border-color: #FDB813;
+    background: #FDB813;
+}
+
+.our-values .value-card:hover .value-card-header {
+    color: white;
+}
+
+.our-values .value-card:hover .value-card-content,
+.our-values .value-card:hover .value-card-content p {
+    color: white;
+}
+
+.our-values .value-card:hover .value-card-icon::before {
+    color: white;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.our-values .value-card:hover .value-card-button {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    color: white;
+}
+
+.our-values .value-card:hover .value-card-read-more {
+    color: white;
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatCard1 {
+    0%, 100% {
+        transform: rotate(3deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(3deg) translateY(-10px);
+    }
+}
+
+@keyframes floatCard2 {
+    0%, 100% {
+        transform: rotate(-5deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-10px);
+    }
+}
+
+@keyframes floatCard3 {
+    0%, 100% {
+        transform: rotate(-5deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-10px);
+    }
+}
+
+@keyframes floatCard4 {
+    0%, 100% {
+        transform: rotate(9deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(9deg) translateY(-10px);
+    }
+}
+
+.our-values .card-1 {
+    position: relative;
+    top: 100px;
+    left: 50px;
+    animation: floatCard1 3s ease-in-out infinite;
+}
+
+.our-values .card-2 {
+    position: relative;
+    top: 70px;
+    right: 50px;
+    animation: floatCard2 3.5s ease-in-out infinite 0.5s;
+}
+
+.our-values .card-3 {
+    position: relative;
+    left: 20px;
+    top: 50px;
+    animation: floatCard3 3.2s ease-in-out infinite 1s;
+}
+
+.our-values .card-4 {
+    position: relative;
+    top: 100px;
+    right: 50px;
+    animation: floatCard4 3.8s ease-in-out infinite 1.5s;
+}
+
+.our-values .card-1:hover {
+    animation-play-state: paused;
+}
+
+.our-values .card-2:hover {
+    animation-play-state: paused;
+}
+
+.our-values .card-3:hover {
+    animation-play-state: paused;
+}
+
+.our-values .card-4:hover {
+    animation-play-state: paused;
+}
+
+.our-values .card-4 {
+    background: #FDB813;
+}
+
+.our-values .card-4 .value-card-header {
+    color: white;
+}
+
+.our-values .card-4 .value-card-content,
+.our-values .card-4 .value-card-content p {
+    color: white;
+}
+
+.our-values .card-4 .value-card-icon::before {
+    color: white;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.our-values .card-4 .value-card-button {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    color: white;
+}
+
+.our-values .card-4 .value-card-read-more {
+    color: white;
+}
+
+.value-card-icon {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 28px;
+    height: 28px;
+    color: #FDB813;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.value-card-icon::before {
+    content: '⚡';
+    font-size: 1.5rem;
+    color: #FDB813;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.card-2 .value-card-icon::before {
+    content: '';
+}
+
+.card-2 .value-card-icon i {
+    font-size: 1.5rem;
+    color: #FDB813;
+    transition: all 0.3s ease;
+}
+
+.card-2:hover .value-card-icon i {
+    color: white;
+}
+
+.card-3 .value-card-icon::before {
+    content: '';
+}
+
+.card-3 .value-card-icon i {
+    font-size: 1.5rem;
+    color: #FDB813;
+    transition: all 0.3s ease;
+}
+
+.card-3:hover .value-card-icon i {
+    color: white;
+}
+
+.card-4 .value-card-icon::before {
+    content: '';
+}
+
+.card-4 .value-card-icon i {
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.value-card-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFF3D9;
+    border: 1px solid #FDB813;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FDB813;
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.value-card-button::after {
+    content: '→';
+}
+
+.our-values .value-card-header {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    letter-spacing: -0.5px;
+    color: #333333;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.value-card-content {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.value-card-content p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.value-card-read-more {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333333;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.value-card-read-more::after {
+    content: '→';
+    font-size: 0.85rem;
 }
 
 .value-card-orange:hover {
